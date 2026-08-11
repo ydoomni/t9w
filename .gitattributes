@@ -1,0 +1,4 @@
+*.gst text eol=lf
+*.cat text eol=lf
+*.md text eol=lf
+*.py text eol=lf
