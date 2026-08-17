@@ -6,7 +6,8 @@
 
 - `第九纪元：中古战锤.gst`：游戏系统、分值类型、属性栏、军队分类、通用装备、通用特殊物品和法系入口。
 - `黑暗精灵.cat`：黑暗精灵 2026 beta1 的完整基础军队列表，以及黑暗精灵传奇人物。
-- `tools/build_data.py`：数据源与确定性生成器。每个对象使用永久内部键生成稳定 ID；修改显示名称、点数或描述不会改变 ID。
+- `巴托尼亚.cat`、`木精灵.cat`、`震旦天朝.cat`、`混沌矮人.cat`、`矮人群山王国.cat`、`混沌勇士.cat`：对应 2026 beta 军书的基础军表目录。
+- `tools/build_data.py` 与 `tools/faction_books.py`：确定性生成器及六军结构化数据。每个对象使用永久内部键生成稳定 ID；修改显示名称、点数或描述不会改变 ID。
 - `tests/validate_data.py`：XML、ID、引用、游戏系统关联、数值和明显约束冲突检查。
 
 ## 使用
@@ -28,6 +29,7 @@
 4. 运行验证：
 
    ```powershell
+   python -m unittest discover -s tests -p 'test_*.py' -v
    python tests/validate_data.py
    ```
 
@@ -36,4 +38,3 @@
 ## 版权
 
 规则 PDF 仅用于理解和实现。仓库不包含原始 PDF、扫描件或大段原文，只保存军表生成所需的数据、短摘要与来源定位信息。
-
