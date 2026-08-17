@@ -83,6 +83,13 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="20b9-642f-0e32-694c" name="法师" hidden="true" />
+    <categoryEntry id="11c1-a124-b7fc-5c44" name="祈求女神" hidden="false" />
+    <categoryEntry id="2407-657f-4049-7df5" name="暗箭难防" hidden="false" />
+    <categoryEntry id="a5d3-0244-6e38-ad11" name="真龙血裔" hidden="false" />
+    <categoryEntry id="aebd-b121-50ef-620c" name="天工开物" hidden="false" />
+    <categoryEntry id="3743-9974-522c-324a" name="毁灭装置" hidden="false" />
+    <categoryEntry id="5cda-4ae9-ca9b-cbf4" name="氏族雷霆" hidden="false" />
+    <categoryEntry id="5f73-2713-c55f-c8d2" name="战争引擎" hidden="false" />
   </categoryEntries>
   <sharedRules>
     <rule id="37d1-0e5d-dda6-dff3" name="军队分值" hidden="false" publicationId="a41c-a267-ba00-e748">

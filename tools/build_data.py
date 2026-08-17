@@ -4,6 +4,11 @@ import hashlib
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+try:
+    from tools.faction_books import FACTIONS
+except ModuleNotFoundError:  # Support direct execution: python tools/build_data.py
+    from faction_books import FACTIONS
+
 
 ROOT = Path(__file__).resolve().parents[1]
 GST_NS = "http://www.battlescribe.net/schema/gameSystemSchema"
@@ -189,6 +194,13 @@ CATEGORIES = {
     "bsb": "军旗手",
     "non_character": "非人物单位",
     "wizard": "法师",
+    "goddess": "祈求女神",
+    "hidden-arrows": "暗箭难防",
+    "true-dragon": "真龙血裔",
+    "celestial-craft": "天工开物",
+    "engines-destruction": "毁灭装置",
+    "clan-thunder": "氏族雷霆",
+    "war-engines": "战争引擎",
 }
 
 
@@ -1111,6 +1123,447 @@ def add_unit(
         sub(repeats, namespace, "repeat", field="selections", scope="roster", value=1, percentValue=False, shared=True, includeChildSelections=True, includeChildForces=True, childId=stable_id(f"unit:{data['reduced_by']}"), repeats=1, roundUp=False)
 
 
+def faction_object_key(faction_key: str, kind: str, object_key: str) -> str:
+    return f"{kind}:{faction_key}:{object_key}"
+
+
+def add_faction_banner_choices(
+    parent: ET.Element,
+    namespace: str,
+    faction: dict[str, object],
+    key: str,
+    maximum: int = 1,
+) -> None:
+    faction_key = str(faction["key"])
+    groups = child_container(parent, namespace, "selectionEntryGroups")
+    group = sub(
+        groups,
+        namespace,
+        "selectionEntryGroup",
+        id=stable_id(f"group:{faction_key}:{key}:banner-items"),
+        name=f"旗帜附魔（至多{maximum}件）",
+        hidden=False,
+        collective=False,
+        import_="true",
+    )
+    group.attrib["import"] = group.attrib.pop("import_")
+    add_constraint(group, namespace, f"{faction_key}:{key}:banner-items:max", "max", maximum, include_children=True)
+    add_entry_link(
+        group,
+        namespace,
+        f"{faction_key}:{key}:common-banners",
+        "通用旗帜附魔",
+        stable_id("group:common-items:banner"),
+        "selectionEntryGroup",
+    )
+    banner_kinds = ["banner", *faction.get("banner_kinds", [])]
+    for kind in banner_kinds:
+        if kind in dict(faction.get("items", {})):
+            add_entry_link(
+                group,
+                namespace,
+                f"{faction_key}:{key}:faction-banners:{kind}",
+                f"{faction['name']}旗帜附魔",
+                stable_id(f"group:{faction_key}:items:{kind}"),
+                "selectionEntryGroup",
+            )
+
+
+def add_faction_item_wrapper(
+    unit_entry: ET.Element,
+    namespace: str,
+    faction: dict[str, object],
+    data: dict[str, object],
+    general_id: str | None,
+) -> None:
+    faction_key = str(faction["key"])
+    unit_key = str(data["key"])
+    budget = int(data["item_budget"])
+    entries = child_container(unit_entry, namespace, "selectionEntries")
+    wrapper_key = f"{faction_key}:items:{unit_key}"
+    wrapper = new_selection_entry(entries, namespace, wrapper_key, f"特殊物品（至多{budget}分）", "upgrade")
+    add_constraint(wrapper, namespace, f"{wrapper_key}:selected", "max", 1)
+    budget_constraint = add_constraint(
+        wrapper,
+        namespace,
+        f"{wrapper_key}:budget",
+        "max",
+        budget,
+        field=POINTS,
+        include_children=True,
+    )
+    groups = child_container(wrapper, namespace, "selectionEntryGroups")
+    group = sub(
+        groups,
+        namespace,
+        "selectionEntryGroup",
+        id=stable_id(f"group:{wrapper_key}"),
+        name="特殊物品选择",
+        hidden=False,
+        collective=False,
+        import_="true",
+    )
+    group.attrib["import"] = group.attrib.pop("import_")
+    if not faction.get("no_common_items"):
+        for kind, label in [("weapon", "武器附魔"), ("armour", "护甲附魔"), ("curio", "魔法奇物")]:
+            add_entry_link(
+                group,
+                namespace,
+                f"{wrapper_key}:common:{kind}",
+                f"通用{label}",
+                stable_id(f"group:common-items:{kind}"),
+                "selectionEntryGroup",
+            )
+    faction_kinds = ["weapon", "armour", "curio", *data.get("faction_item_kinds", [])]
+    for kind in dict.fromkeys(faction_kinds):
+        if kind not in dict(faction.get("items", {})):
+            continue
+        add_entry_link(
+            group,
+            namespace,
+            f"{wrapper_key}:faction:{kind}",
+            f"{faction['name']}：{kind}",
+            stable_id(f"group:{faction_key}:items:{kind}"),
+            "selectionEntryGroup",
+        )
+    if general_id and data.get("item_budget_general") is not None:
+        modifiers = child_container(wrapper, namespace, "modifiers")
+        modifier = sub(
+            modifiers,
+            namespace,
+            "modifier",
+            type="set",
+            value=int(data["item_budget_general"]),
+            field=budget_constraint,
+        )
+        add_condition(
+            modifier,
+            namespace,
+            condition_type="atLeast",
+            value=1,
+            field="selections",
+            scope="ancestor",
+            child_id=general_id,
+        )
+    add_cost(wrapper, namespace, 0)
+
+
+def add_faction_option(
+    parent: ET.Element,
+    namespace: str,
+    faction_key: str,
+    unit_key: str,
+    option_data: tuple,
+    model_id: str | None,
+) -> tuple[ET.Element, str | None]:
+    name, cost, *rest = option_data
+    tag = str(rest[0]) if rest else None
+    key = f"{faction_key}:option:{unit_key}:{name}"
+    option = new_selection_entry(parent, namespace, key, str(name), "upgrade")
+    add_constraint(option, namespace, f"{key}:parent", "max", 1)
+    if tag and tag.startswith("per_model"):
+        if model_id is None:
+            raise ValueError(f"Per-model option without a model entry: {faction_key}/{unit_key}/{name}")
+        add_per_model_cost(option, namespace, key, int(cost), model_id)
+    else:
+        add_cost(option, namespace, int(cost))
+    if tag == "bsb":
+        add_category_link(option, namespace, f"{key}:bsb", CATEGORIES["bsb"], category_id("bsb"))
+        add_faction_banner_choices(option, namespace, next(f for f in FACTIONS if f["key"] == faction_key), key, 2)
+    return option, tag
+
+
+def add_faction_unit(
+    parent: ET.Element,
+    namespace: str,
+    faction: dict[str, object],
+    data: dict[str, object],
+    publication_id: str,
+) -> None:
+    faction_key = str(faction["key"])
+    unit_key = str(data["key"])
+    key = f"{faction_key}:{unit_key}"
+    entry = new_selection_entry(
+        parent,
+        namespace,
+        faction_object_key(faction_key, "unit", unit_key),
+        str(data["name"]),
+        "unit",
+        publication_id=publication_id,
+        page=data.get("page"),
+    )
+    add_profile(entry, namespace, f"{key}:global", "global", str(data["name"]), dict(zip(PROFILE_TYPES["global"][1], data["global"])))
+    add_profile(entry, namespace, f"{key}:defence", "defence", str(data["name"]), dict(zip(PROFILE_TYPES["defence"][1], data["defence"])))
+    for index, attack in enumerate(data["offence"]):
+        add_profile(entry, namespace, f"{key}:offence:{index}", "offence", str(attack[0]), dict(zip(PROFILE_TYPES["offence"][1], attack[1:])))
+    for detail_name, description in data.get("details", []):
+        add_embedded_rule(entry, namespace, f"{key}:detail:{detail_name}", str(detail_name), str(description))
+
+    categories = [str(data["category"]), *[str(value) for value in data.get("extra_categories", [])]]
+    for index, category in enumerate(categories):
+        add_category_link(entry, namespace, f"{key}:category:{category}", CATEGORIES[category], category_id(category), primary=index == 0)
+    if data["category"] != "characters":
+        add_category_link(entry, namespace, f"{key}:non-character", CATEGORIES["non_character"], category_id("non_character"))
+    if data.get("wizard") or data.get("lores"):
+        add_category_link(entry, namespace, f"{key}:wizard", CATEGORIES["wizard"], category_id("wizard"))
+    if data.get("shared_pool"):
+        pool_key = str(data["shared_pool"])
+        add_category_link(
+            entry,
+            namespace,
+            f"{key}:pool:{pool_key}",
+            next(name for pool, name, _limit in faction.get("shared_pools", []) if pool == pool_key),
+            stable_id(f"category:{faction_key}:pool:{pool_key}"),
+        )
+
+    model_id: str | None = None
+    if data.get("min") is not None:
+        entries = child_container(entry, namespace, "selectionEntries")
+        model_key = faction_object_key(faction_key, "model", unit_key)
+        model_id = stable_id(model_key)
+        minimum = int(data["min"])
+        maximum = int(data["max"])
+        extra_cost = int(data["extra_cost"])
+        adjustment = int(data["cost"]) - minimum * extra_cost
+        if adjustment >= 0:
+            model = new_selection_entry(entries, namespace, model_key, str(data["name"]), "model")
+            add_constraint(model, namespace, f"{model_key}:min", "min", minimum)
+            add_constraint(model, namespace, f"{model_key}:max", "max", maximum)
+            if data.get("model_limit"):
+                add_scaled_limit(model, namespace, f"{model_key}:roster", int(data["model_limit"]))
+            add_cost(model, namespace, extra_cost)
+            add_cost(entry, namespace, adjustment)
+        else:
+            model = new_selection_entry(entries, namespace, model_key, str(data["name"]), "model")
+            add_constraint(model, namespace, f"{model_key}:min", "min", minimum)
+            add_constraint(model, namespace, f"{model_key}:max", "max", minimum)
+            add_cost(model, namespace, 0)
+            additional_key = faction_object_key(faction_key, "model-extra", unit_key)
+            additional = new_selection_entry(entries, namespace, additional_key, f"额外{data['name']}", "model")
+            add_constraint(additional, namespace, f"{additional_key}:max", "max", maximum - minimum)
+            add_cost(additional, namespace, extra_cost)
+            add_cost(entry, namespace, int(data["cost"]))
+    else:
+        add_cost(entry, namespace, int(data["cost"]))
+
+    if data.get("unique"):
+        add_constraint(entry, namespace, f"{key}:unique", "max", 1, scope="roster", include_children=True, include_forces=True)
+    elif data.get("limit"):
+        add_scaled_limit(entry, namespace, key, int(data["limit"]))
+
+    entries = child_container(entry, namespace, "selectionEntries")
+    general_id: str | None = None
+    bsb_ids: list[str] = []
+    if data.get("general"):
+        general_key = f"{faction_key}:option:{unit_key}:general"
+        general = new_selection_entry(entries, namespace, general_key, "任命为将军", "upgrade")
+        general_id = general.get("id")
+        add_constraint(general, namespace, f"{general_key}:max", "max", 1)
+        add_category_link(general, namespace, f"{general_key}:category", CATEGORIES["general"], category_id("general"))
+        add_cost(general, namespace, 0)
+    if data.get("bsb") is not None:
+        bsb_key = f"{faction_key}:option:{unit_key}:bsb"
+        bsb = new_selection_entry(entries, namespace, bsb_key, "军旗手", "upgrade")
+        bsb_ids.append(bsb.get("id", ""))
+        add_constraint(bsb, namespace, f"{bsb_key}:max", "max", 1)
+        add_category_link(bsb, namespace, f"{bsb_key}:category", CATEGORIES["bsb"], category_id("bsb"))
+        add_faction_banner_choices(bsb, namespace, faction, bsb_key, 2)
+        add_cost(bsb, namespace, int(data["bsb"]))
+
+    option_effects: list[tuple[str, str | None]] = []
+    for option_data in data.get("options", []):
+        option, tag = add_faction_option(entries, namespace, faction_key, unit_key, option_data, model_id)
+        option_effects.append((option.get("id", ""), tag))
+
+    groups = child_container(entry, namespace, "selectionEntryGroups")
+    for index, (group_name, minimum, maximum, options) in enumerate(data.get("option_groups", [])):
+        group_key = f"{faction_key}:unit:{unit_key}:group:{index}"
+        group = sub(groups, namespace, "selectionEntryGroup", id=stable_id(group_key), name=group_name, hidden=False, collective=False, import_="true")
+        group.attrib["import"] = group.attrib.pop("import_")
+        if minimum:
+            add_constraint(group, namespace, f"{group_key}:min", "min", int(minimum), include_children=True)
+        if maximum:
+            add_constraint(group, namespace, f"{group_key}:max", "max", int(maximum), include_children=True)
+        group_entries = sub(group, namespace, "selectionEntries")
+        for option_data in options:
+            option, tag = add_faction_option(group_entries, namespace, faction_key, unit_key, option_data, model_id)
+            option_effects.append((option.get("id", ""), tag))
+            if tag == "bsb":
+                bsb_ids.append(option.get("id", ""))
+
+    command_data = data.get("command")
+    if command_data:
+        command = sub(groups, namespace, "selectionEntryGroup", id=stable_id(f"{faction_key}:unit:{unit_key}:command"), name="指挥组", hidden=False, collective=False, import_="true")
+        command.attrib["import"] = command.attrib.pop("import_")
+        command_entries = sub(command, namespace, "selectionEntries")
+        roles = [("队长", 10), ("乐手", 10), ("旗手", 10)] if command_data is True else list(command_data)
+        for role, cost in roles:
+            role_key = f"{faction_key}:option:{unit_key}:command:{role}"
+            upgrade = new_selection_entry(command_entries, namespace, role_key, str(role), "upgrade")
+            add_constraint(upgrade, namespace, f"{role_key}:max", "max", 1)
+            add_cost(upgrade, namespace, int(cost))
+            if role in {"旗手", "方旗骑士"}:
+                add_faction_banner_choices(upgrade, namespace, faction, role_key)
+
+    if data.get("mounts"):
+        mount_group = sub(groups, namespace, "selectionEntryGroup", id=stable_id(f"{faction_key}:unit:{unit_key}:mounts"), name="坐骑（至多一项）", hidden=False, collective=False, import_="true")
+        mount_group.attrib["import"] = mount_group.attrib.pop("import_")
+        add_constraint(mount_group, namespace, f"{faction_key}:unit:{unit_key}:mounts:max", "max", 1, include_children=True)
+        mounts_by_key = {str(mount["key"]): mount for mount in faction.get("mounts", [])}
+        for mount_key, cost, *_rest in data["mounts"]:
+            mount = mounts_by_key[str(mount_key)]
+            add_entry_link(
+                mount_group,
+                namespace,
+                f"{faction_key}:unit:{unit_key}:mount:{mount_key}",
+                str(mount["name"]),
+                stable_id(faction_object_key(faction_key, "mount", str(mount_key))),
+                "selectionEntry",
+                cost=int(cost),
+            )
+
+    if data.get("lores"):
+        lore_group = sub(groups, namespace, "selectionEntryGroup", id=stable_id(f"{faction_key}:unit:{unit_key}:lores"), name="魔法派系（必须选择一项）", hidden=False, collective=False, import_="true")
+        lore_group.attrib["import"] = lore_group.attrib.pop("import_")
+        add_constraint(lore_group, namespace, f"{faction_key}:unit:{unit_key}:lores:min", "min", 1, include_children=True)
+        add_constraint(lore_group, namespace, f"{faction_key}:unit:{unit_key}:lores:max", "max", 1, include_children=True)
+        for lore in data["lores"]:
+            add_entry_link(lore_group, namespace, f"{faction_key}:unit:{unit_key}:lore:{lore}", str(lore), stable_id(f"lore:{lore}"), "selectionEntry")
+
+    if data.get("spell_choices"):
+        spell_group = sub(groups, namespace, "selectionEntryGroup", id=stable_id(f"{faction_key}:unit:{unit_key}:spells"), name=f"法术（选择{data['spell_count']}项）", hidden=False, collective=False, import_="true")
+        spell_group.attrib["import"] = spell_group.attrib.pop("import_")
+        add_constraint(spell_group, namespace, f"{faction_key}:unit:{unit_key}:spells:min", "min", int(data["spell_count"]), include_children=True)
+        add_constraint(spell_group, namespace, f"{faction_key}:unit:{unit_key}:spells:max", "max", int(data["spell_count"]), include_children=True)
+        spell_entries = sub(spell_group, namespace, "selectionEntries")
+        for spell in data["spell_choices"]:
+            spell_key = f"{faction_key}:spell-choice:{unit_key}:{spell}"
+            choice = new_selection_entry(spell_entries, namespace, spell_key, str(spell), "upgrade")
+            add_constraint(choice, namespace, f"{spell_key}:max", "max", 1)
+            add_cost(choice, namespace, 0)
+
+    if data.get("item_budget") is not None:
+        add_faction_item_wrapper(entry, namespace, faction, data, general_id)
+
+    for option_id, tag in option_effects:
+        if tag == "per_model_category_special":
+            add_category_change(entry, namespace, f"{key}:to-special", option_id, add=["special"], remove=["core"], primary="special")
+        elif tag == "per_model_add_hidden_arrows":
+            add_category_change(entry, namespace, f"{key}:add-hidden-arrows", option_id, add=["hidden-arrows"])
+        elif tag == "per_model_add_clan_thunder":
+            add_category_change(entry, namespace, f"{key}:add-clan-thunder", option_id, add=["clan-thunder"])
+        elif tag == "add_clan_thunder":
+            add_category_change(entry, namespace, f"{key}:add-clan-thunder", option_id, add=["clan-thunder"])
+
+    if general_id and bsb_ids:
+        for bsb_id in bsb_ids:
+            general = next((node for node in entry.iter() if node.get("id") == general_id), None)
+            bsb = next((node for node in entry.iter() if node.get("id") == bsb_id), None)
+            if general is not None:
+                modifiers = child_container(general, namespace, "modifiers")
+                hide = sub(modifiers, namespace, "modifier", type="set", value=True, field="hidden")
+                add_condition(hide, namespace, condition_type="atLeast", value=1, field="selections", scope="ancestor", child_id=bsb_id)
+            if bsb is not None:
+                modifiers = child_container(bsb, namespace, "modifiers")
+                hide = sub(modifiers, namespace, "modifier", type="set", value=True, field="hidden")
+                add_condition(hide, namespace, condition_type="atLeast", value=1, field="selections", scope="ancestor", child_id=general_id)
+
+
+def build_faction_catalogue(faction: dict[str, object]) -> None:
+    ns = CAT_NS
+    ET.register_namespace("", ns)
+    faction_key = str(faction["key"])
+    root = ET.Element(
+        q(ns, "catalogue"),
+        {
+            "id": stable_id(f"catalogue:{faction_key}"),
+            "name": str(faction["name"]),
+            "revision": "1",
+            "battleScribeVersion": "2.03",
+            "authorName": "Custom Rules Data Team",
+            "library": "false",
+            "gameSystemId": GAME_SYSTEM_ID,
+            "gameSystemRevision": "1",
+            "type": "catalogue",
+        },
+    )
+    publications = sub(root, ns, "publications")
+    publication_id = stable_id(f"publication:{faction_key}")
+    sub(
+        publications,
+        ns,
+        "publication",
+        id=publication_id,
+        name=faction["publication"],
+        shortName=faction["short_name"],
+        publicationDate=faction["publication_date"],
+    )
+
+    shared_rules = sub(root, ns, "sharedRules")
+    for rule_key, rule_name, description, page in faction.get("rules", []):
+        rule = sub(shared_rules, ns, "rule", id=stable_id(f"faction-rule:{faction_key}:{rule_key}"), name=rule_name, hidden=False, publicationId=publication_id, page=page)
+        sub(rule, ns, "description").text = description
+
+    shared_entries = sub(root, ns, "sharedSelectionEntries")
+    for mount in faction.get("mounts", []):
+        mount_key = str(mount["key"])
+        entry = sub(shared_entries, ns, "selectionEntry", id=stable_id(faction_object_key(faction_key, "mount", mount_key)), name=mount["name"], hidden=False, collective=False, type="upgrade", import_="true", publicationId=publication_id, page=mount["page"])
+        entry.attrib["import"] = entry.attrib.pop("import_")
+        add_profile(entry, ns, f"{faction_key}:mount:{mount_key}:global", "global", str(mount["name"]), dict(zip(PROFILE_TYPES["global"][1], mount["global"])))
+        add_profile(entry, ns, f"{faction_key}:mount:{mount_key}:defence", "defence", str(mount["name"]), dict(zip(PROFILE_TYPES["defence"][1], mount["defence"])))
+        for index, attack in enumerate(mount["offence"]):
+            add_profile(entry, ns, f"{faction_key}:mount:{mount_key}:offence:{index}", "offence", str(attack[0]), dict(zip(PROFILE_TYPES["offence"][1], attack[1:])))
+        for category in mount.get("extra_categories", []):
+            add_category_link(entry, ns, f"{faction_key}:mount:{mount_key}:category:{category}", CATEGORIES[str(category)], category_id(str(category)))
+        if mount.get("unique"):
+            add_constraint(entry, ns, f"{faction_key}:mount:{mount_key}:unique", "max", 1, scope="roster", include_children=True, include_forces=True)
+        elif mount.get("limit"):
+            add_scaled_limit(entry, ns, f"{faction_key}:mount:{mount_key}", int(mount["limit"]))
+        add_constraint(entry, ns, f"{faction_key}:mount:{mount_key}:parent", "max", 1)
+        add_cost(entry, ns, 0)
+
+    shared_groups = sub(root, ns, "sharedSelectionEntryGroups")
+    for kind, items in dict(faction.get("items", {})).items():
+        group = sub(shared_groups, ns, "selectionEntryGroup", id=stable_id(f"group:{faction_key}:items:{kind}"), name=f"{faction['name']}：{kind}", hidden=False, collective=False, import_="true")
+        group.attrib["import"] = group.attrib.pop("import_")
+        item_entries = sub(group, ns, "selectionEntries")
+        for item_data in items:
+            item_key, item_name, cost, description, page, *limits = item_data
+            parent_max = int(limits[0]) if limits else 1
+            roster_limit = int(limits[1]) if len(limits) > 1 else 1
+            item = sub(item_entries, ns, "selectionEntry", id=stable_id(f"faction-item:{faction_key}:{kind}:{item_key}"), name=item_name, hidden=False, collective=False, import_="true", type="upgrade", publicationId=publication_id, page=page)
+            item.attrib["import"] = item.attrib.pop("import_")
+            add_constraint(item, ns, f"faction-item:{faction_key}:{kind}:{item_key}:parent", "max", parent_max)
+            if roster_limit < 99:
+                add_constraint(item, ns, f"faction-item:{faction_key}:{kind}:{item_key}:roster", "max", roster_limit, scope="roster", include_children=True, include_forces=True)
+            add_embedded_rule(item, ns, f"faction-item:{faction_key}:{kind}:{item_key}", str(item_name), str(description))
+            add_cost(item, ns, int(cost))
+
+    selection_entries = sub(root, ns, "selectionEntries")
+    for data in faction["units"]:
+        add_faction_unit(selection_entries, ns, faction, data, publication_id)
+
+    local_categories = sub(root, ns, "categoryEntries")
+    for pool_key, pool_name, limit in faction.get("shared_pools", []):
+        pool = sub(local_categories, ns, "categoryEntry", id=stable_id(f"category:{faction_key}:pool:{pool_key}"), name=pool_name, hidden=True)
+        add_scaled_limit(pool, ns, f"category:{faction_key}:pool:{pool_key}", int(limit), scope="force")
+
+    force_entries = sub(root, ns, "forceEntries")
+    force = sub(force_entries, ns, "forceEntry", id=stable_id(f"force:{faction_key}:standard"), name="标准军队", hidden=False, publicationId=publication_id, page=faction["force_page"])
+    for category_key, category_name, constraint_type, value in faction["categories"]:
+        link = add_category_link(force, ns, f"force:{faction_key}:{category_key}", str(category_name), category_id(str(category_key)), primary=True)
+        if constraint_type:
+            add_constraint(link, ns, f"force:{faction_key}:{category_key}:{constraint_type}-points", str(constraint_type), int(value), field=POINTS, scope="roster", percent=True, include_children=True, include_forces=True)
+    for hidden_key in ["general", "bsb", "non_character", "wizard"]:
+        add_category_link(force, ns, f"force:{faction_key}:{hidden_key}", CATEGORIES[hidden_key], category_id(hidden_key))
+    for pool_key, pool_name, _limit in faction.get("shared_pools", []):
+        add_category_link(force, ns, f"force:{faction_key}:pool:{pool_key}", pool_name, stable_id(f"category:{faction_key}:pool:{pool_key}"))
+    for rule_key, rule_name, _description, _page in faction.get("rules", []):
+        add_info_link(force, ns, f"force:{faction_key}:rule:{rule_key}", rule_name, stable_id(f"faction-rule:{faction_key}:{rule_key}"))
+
+    write_xml(root, ROOT / str(faction["filename"]))
+
+
 def build_game_system() -> None:
     ns = GST_NS
     ET.register_namespace("", ns)
@@ -1294,6 +1747,8 @@ def build_catalogue() -> None:
 def main() -> None:
     build_game_system()
     build_catalogue()
+    for faction in FACTIONS:
+        build_faction_catalogue(faction)
 
 
 if __name__ == "__main__":
