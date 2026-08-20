@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from tools import build_data  # noqa: E402
 from tools.faction_books import FACTIONS  # noqa: E402
+from tools.faction_books_batch2 import FACTIONS as BATCH_TWO_FACTIONS  # noqa: E402
 
 
 class CatalogueContentTests(unittest.TestCase):
@@ -114,10 +115,27 @@ class CatalogueContentTests(unittest.TestCase):
             "混沌勇士": (28, 16, 7),
         }
         for faction in FACTIONS:
+            if faction["name"] not in expected:
+                continue
             self.assertEqual(
                 (len(faction["units"]), len(faction["mounts"]), sum(map(len, faction["items"].values()))),
                 expected[faction["name"]],
             )
+
+    def test_second_pdf_batch_has_catalogues_and_records(self) -> None:
+        self.assertEqual(len(BATCH_TWO_FACTIONS), 18)
+        self.assertGreaterEqual(sum(len(faction["units"]) for faction in BATCH_TWO_FACTIONS), 430)
+        for faction in BATCH_TWO_FACTIONS:
+            self.assertGreaterEqual(len(faction["units"]), 12, faction["name"])
+            self.assertTrue(all(int(unit["cost"]) > 0 for unit in faction["units"]), faction["name"])
+            self.assertTrue(
+                all(
+                    unit.get("min") is None or int(unit["max"]) >= int(unit["min"])
+                    for unit in faction["units"]
+                ),
+                faction["name"],
+            )
+            self.assertTrue((ROOT / faction["filename"]).exists(), faction["filename"])
 
     def test_expansion_conditional_constraints_are_generated(self) -> None:
         namespace = {"cat": build_data.CAT_NS}

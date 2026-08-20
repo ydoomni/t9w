@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue xmlns="http://www.battlescribe.net/schema/catalogueSchema" id="e14f-d68d-bb5b-7965" name="古墓王" revision="1" battleScribeVersion="2.03" authorName="Custom Rules Data Team" library="false" gameSystemId="9e00-2026-0000-0001" gameSystemRevision="1" type="catalogue">
+  <publications>
+    <publication id="2fa3-ddf1-caad-94a8" name="古墓王种族规则 2026 beta2" shortName="TK-2026β2" publicationDate="2026-05-01" />
+  </publications>
+  <sharedRules />
+  <sharedSelectionEntries />
+  <sharedSelectionEntryGroups />
+  <selectionEntries>
+    <selectionEntry id="7adf-23de-b767-2e11" name="古墓王子" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="8" import="true">
+      <profiles>
+        <profile id="c7e3-f746-e0b4-f193" name="古墓王子" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">9</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">4” 8” 1 亡灵，尘归尘，恐惧，吾愿必达</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8191-8be9-b148-a3c0" name="古墓王子" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">5</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，易燃</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f4c2-21de-eec5-9bce" name="古墓王子" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">2</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓王子 诅咒</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="427a-fd38-8e5e-b32d" name="来源" hidden="false">
+          <description>用户提供军书第8页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="9e69-c6a4-272a-426c" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="130" />
+      </costs>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="0bb3-712e-f83a-4937" name="古墓军锋" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="8" import="true">
+      <profiles>
+        <profile id="26fd-a0ed-c7d6-4246" name="古墓军锋" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">7</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">4” 8” 1 亡灵，尘归尘</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cacd-5a9e-21de-6a3d" name="古墓军锋" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">5</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，易燃</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0cb5-eb25-19d1-c3d9" name="古墓军锋" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">3</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓军锋 黄沙之击，致命一击，毒性攻击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="fc20-f18b-b181-af39" name="来源" hidden="false">
+          <description>用户提供军书第8页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="e665-ca10-3ffa-e8e4" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="120" />
+      </costs>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="7bc1-4d9e-694e-6dab" name="巫妖祭司" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="9" import="true">
+      <profiles>
+        <profile id="0d0c-3206-2040-a682" name="巫妖祭司" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">7</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">4” 8” 1 亡灵，尘归尘，魔法学徒</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3f60-df1c-2487-fc0b" name="巫妖祭司" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">3</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="87c5-0301-4888-67b9" name="巫妖祭司" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">巫妖祭司</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="deee-7f1c-76d1-d2d4" name="来源" hidden="false">
+          <description>用户提供军书第9页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="78e3-b9fe-f9cd-420c" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true" />
+        <categoryLink id="8f42-2cc1-90f7-c60c" name="法师" hidden="false" targetId="20b9-642f-0e32-694c" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="115" />
+      </costs>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="f901-7828-5291-b284" name="古墓技师" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="10" import="true">
+      <profiles>
+        <profile id="3c6e-ad4b-fdb9-eccb" name="古墓技师" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">7</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">4” 8” 1 亡灵，尘归尘，切石者</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dafc-32ab-b982-ef9b" name="古墓技师" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">易燃，轻甲</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f0d3-468c-6b36-83d1" name="古墓技师" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">2</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓技师</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6863-6e01-5831-ef77" name="来源" hidden="false">
+          <description>用户提供军书第10页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="0675-0b99-2741-546b" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="175" />
+      </costs>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="c387-d058-fc84-cb3f" name="魂棺" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="10" import="true">
+      <profiles>
+        <profile id="fc7e-2472-4095-ab13" name="魂棺" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">4"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">构装体</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">75mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">4” 4” 2 亡灵，尘归尘，战争机器，不当头儿，传导 ，法力加持，庇护</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c31c-468c-2e4a-b95d" name="魂棺" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">5</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">1</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，魔盾</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4445-39b0-1858-7b8e" name="魂棺" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓守卫 戟，魔法攻击，致命一击，毒性攻击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d74e-b985-4421-d5bf" name="来源" hidden="false">
+          <description>用户提供军书第10页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="892a-0f2a-eaf7-9db5" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="180" />
+      </costs>
+      <constraints>
+        <constraint id="7681-d50a-ab7d-c2bd" type="max" value="2" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="7681-d50a-ab7d-c2bd">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="4" field="7681-d50a-ab7d-c2bd">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="7426-7fd9-2bf1-4b6a" name="骷髅战士" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="13" import="true">
+      <profiles>
+        <profile id="c33e-4621-3df0-9380" name="骷髅战士" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">4</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">” 8” 4 7 亡灵，尘归尘，得分</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3910-81c4-c35b-66c4" name="骷髅战士" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">1</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">2</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">3</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，盾牌</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="03c8-bda0-7487-0e6c" name="骷髅战士" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">2</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骷髅战士</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d8e1-c46a-733f-ed77" name="来源" hidden="false">
+          <description>用户提供军书第13页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="e023-aaaa-8483-8d8d" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true" />
+        <categoryLink id="a835-ed20-699a-79fa" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="aafe-7ddc-d650-84d7" name="骷髅战士" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="6fcd-dc34-5e81-fcc0" type="min" value="20" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="3c06-dfe6-3506-52f8" type="max" value="20" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="0" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8b6b-ba51-7728-bff3" name="额外骷髅战士" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="8f9d-7364-db4a-cab2" type="max" value="20" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="6" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="40" />
+      </costs>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="23d7-166e-324e-b737" name="骷髅弓手" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="13" import="true">
+      <profiles>
+        <profile id="7e1c-50e6-ef6e-d81c" name="骷髅弓手" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">8"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">4</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">20x20mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">” 8” 4 6 亡灵，尘归尘，得分</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="445e-7ec7-c692-709f" name="骷髅弓手" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">1</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">2</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">3</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="84c3-ea29-3a49-9aa4" name="骷髅弓手" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">2</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骷髅弓手 阿萨芙之弓</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c559-096e-68ce-2fdc" name="来源" hidden="false">
+          <description>用户提供军书第13页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="eb43-79a1-5282-729a" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true" />
+        <categoryLink id="8fe0-37d0-872d-16be" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="33f7-d2ca-20cb-025a" name="骷髅弓手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="17a4-c8d1-6b1a-5c14" type="min" value="10" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="1ee0-ec32-ba4f-c7c8" type="max" value="10" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="0" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1504-98c8-72e3-59d3" name="额外骷髅弓手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="edd8-5864-6b97-1c9a" type="max" value="10" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="8" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="20" />
+      </costs>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="9056-15ce-5dae-986e" name="骷髅骑手" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="14" import="true">
+      <profiles>
+        <profile id="b007-46c3-2d95-92a2" name="骷髅骑手" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">8"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">16"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">6</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">骑兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">25x50mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">8” 1” 6 4 亡灵 ，尘归尘，先锋，得分</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0406-8161-448c-ccf5" name="骷髅骑手" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">1</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">3</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">1</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，盾牌</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f179-3351-9a83-34e3" name="骷髅骑手" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骷髅骑手 轻骑枪</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9c01-9ac1-b29d-3579" name="来源" hidden="false">
+          <description>用户提供军书第14页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="3119-7522-0e29-0646" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true" />
+        <categoryLink id="1cc3-525f-5298-16fd" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b686-ab3e-fcca-fef6" name="骷髅骑手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="ad8a-cbb5-9932-d29e" type="min" value="10" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="4160-deb3-e023-6b09" type="max" value="10" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="0" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="30ef-bd8e-9926-bdf3" name="额外骷髅骑手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="58ff-4113-e0ba-309b" type="max" value="4" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="10" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="14" />
+      </costs>
+      <constraints>
+        <constraint id="c700-bdb8-5679-0e51" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="c700-bdb8-5679-0e51">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="c700-bdb8-5679-0e51">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="da74-732c-59bc-7635" name="骷髅弓骑手" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="14" import="true">
+      <profiles>
+        <profile id="8f63-3ee9-8194-a0a5" name="骷髅弓骑手" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">8"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">16"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">6</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">骑兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">25x50mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">8” 1” 6 4 亡灵，尘归尘，先锋，侦察兵，轻型部队</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="19bd-5543-5ccd-c870" name="骷髅弓骑手" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">1</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">3</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">1</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5d74-ad67-59c3-23aa" name="骷髅弓骑手" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骷髅弓骑手 阿萨芙之弓</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9928-d37f-2421-152f" name="来源" hidden="false">
+          <description>用户提供军书第14页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="74c0-245c-0879-86d0" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true" />
+        <categoryLink id="6fe8-1b11-10c2-4ede" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4bb3-a7fa-e57e-051b" name="骷髅弓骑手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="6079-8f56-aeee-6bc8" type="min" value="5" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="4235-19ce-a2b2-fe36" type="max" value="5" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="9" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="100" />
+      </costs>
+      <constraints>
+        <constraint id="a454-bce0-04fb-b462" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="a454-bce0-04fb-b462">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="a454-bce0-04fb-b462">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="7bb0-5fca-6ac4-e0ee" name="骷髅战车" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="15" import="true">
+      <profiles>
+        <profile id="8462-52f8-6f2c-9431" name="骷髅战车" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">8"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">10"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">7</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">大型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">构装体</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x100mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">8” 10” 2 亡灵，尘归尘，轻型部队，快速移动，死亡束缚</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1388-ad6d-d3ad-060c" name="骷髅战车" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">1</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">重甲</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b680-d2af-81db-9d56" name="骷髅战车" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">1</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">驾驶员 戟，阿萨芙之弓</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="0517-11a4-16bb-210f" name="来源" hidden="false">
+          <description>用户提供军书第15页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="05fd-3d9e-ff7f-28b8" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true" />
+        <categoryLink id="d6b5-ed0c-b336-3a6a" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d274-b7b1-c8a5-55a4" name="骷髅战车" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="06e1-6b5c-0589-690a" type="min" value="3" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="cf1c-0419-13e6-4347" type="max" value="4" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="70" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="40" />
+      </costs>
+      <constraints>
+        <constraint id="03e3-82bf-d776-4aee" type="max" value="5" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="03e3-82bf-d776-4aee">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="10" field="03e3-82bf-d776-4aee">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="c95a-7c52-cbb5-d74b" name="墓地骑士 285" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="16" import="true">
+      <profiles>
+        <profile id="1a00-4b07-c815-1634" name="墓地骑士 285" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">7"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">14"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">骑兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x100mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">7” 14” 2 亡灵，活化构装体，得分，恐惧</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cc08-83e3-e834-2864" name="墓地骑士 285" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">3</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲，盾牌</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="78f4-3ac1-30bb-107e" name="墓地骑士 285" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">2</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">精锐古墓守卫 戟，致命一击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8d1f-de25-6687-ed1a" name="来源" hidden="false">
+          <description>用户提供军书第16页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="31ca-40c6-51ab-14d1" name="特殊" hidden="false" targetId="61ac-87b4-5333-a8ac" primary="true" />
+        <categoryLink id="39dc-4a3b-63b7-1dfe" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="10" />
+      </costs>
+      <constraints>
+        <constraint id="febb-cd4c-636f-99ad" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="febb-cd4c-636f-99ad">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="febb-cd4c-636f-99ad">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="daf2-c5a5-96cc-29d6" name="乌沙比特" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="17" import="true">
+      <profiles>
+        <profile id="0332-ab68-0505-55fe" name="乌沙比特" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">大型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">40x40mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">6” 12” 2 亡灵，活化构装体，得分，恐惧</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="21e1-9339-f0ca-b765" name="乌沙比特" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6878-b390-f8ba-8091" name="乌沙比特" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">3</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">5</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">2</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">乌沙比特</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="deb3-3555-0f52-5ec9" name="来源" hidden="false">
+          <description>用户提供军书第17页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="9d26-ab1a-9def-c7e8" name="特殊" hidden="false" targetId="61ac-87b4-5333-a8ac" primary="true" />
+        <categoryLink id="dba3-78a3-1f70-7f39" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="175" />
+      </costs>
+      <constraints>
+        <constraint id="2a95-25f0-850e-f250" type="max" value="5" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="3" field="2a95-25f0-850e-f250">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="10" field="2a95-25f0-850e-f250">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="55c7-8d06-a7de-c653" name="腐尸秃鹰" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="17" import="true">
+      <profiles>
+        <profile id="3a32-cfb7-f54e-1f30" name="腐尸秃鹰" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">2"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">4"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">4</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">40x40mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">地面 2” ” 4 3 亡灵，尘归尘，飞行 ， ，轻型部队，散阵</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1694-949b-beac-fa2b" name="腐尸秃鹰" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">2</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">难以瞄准</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="48d9-aed9-6a1d-6812" name="腐尸秃鹰" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">3</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">腐尸秃鹰</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="1a9b-90b5-8701-1719" name="来源" hidden="false">
+          <description>用户提供军书第17页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="d042-15ef-5071-9762" name="特殊" hidden="false" targetId="61ac-87b4-5333-a8ac" primary="true" />
+        <categoryLink id="56b3-efb1-526c-0afa" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="130" />
+      </costs>
+      <constraints>
+        <constraint id="e487-24e6-be28-5b15" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="e487-24e6-be28-5b15">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="e487-24e6-be28-5b15">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="88b0-813a-435a-1f42" name="古墓虫群" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="17" import="true">
+      <profiles>
+        <profile id="7bcc-e52d-8c42-0fea" name="古墓虫群" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">5"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">10"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">7</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">40x40mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">5” 10” 4 亡灵，尘归尘，散阵，轻型部队</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ab39-52dd-7ff7-d3cf" name="古墓虫群" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">5</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">2</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">干扰，难以瞄准</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b261-ed73-ec4d-d782" name="古墓虫群" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">5</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">2</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓虫群 毒性攻击，额外支援( )</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="e565-aaf9-099a-dccf" name="来源" hidden="false">
+          <description>用户提供军书第17页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="d15a-f36e-854e-b654" name="特殊" hidden="false" targetId="61ac-87b4-5333-a8ac" primary="true" />
+        <categoryLink id="dd16-cea8-1702-4188" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="105" />
+      </costs>
+      <constraints>
+        <constraint id="bc77-5661-8c3d-ae11" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="bc77-5661-8c3d-ae11">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="bc77-5661-8c3d-ae11">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="29b4-5216-963e-9277" name="乌沙比特弓手" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="18" import="true">
+      <profiles>
+        <profile id="5193-562f-6099-ee62" name="乌沙比特弓手" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">40x40mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">6” 12” 2 亡灵，活化构装体，得分，恐惧</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="41e8-89aa-2771-a32f" name="乌沙比特弓手" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">轻甲</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0c74-3203-6e16-efec" name="乌沙比特弓手" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">3</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">5</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">乌沙比特弓手 大型阿萨芙之弓</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="26ab-c4aa-3d38-21bc" name="来源" hidden="false">
+          <description>用户提供军书第18页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="3fab-35c3-6c0c-8bc0" name="古代城械" hidden="false" targetId="2a89-eb67-de68-9d12" primary="true" />
+        <categoryLink id="dcd3-6fd4-3116-70ec" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6b32-184e-3c8d-3d87" name="乌沙比特弓手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="678c-3e67-fcf7-b92a" type="min" value="3" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="2f18-5ab2-0192-f1de" type="max" value="3" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="0" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5be3-3043-d42f-7086" name="额外乌沙比特弓手" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="7f80-a828-e291-4f45" type="max" value="2" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="76" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="170" />
+      </costs>
+      <constraints>
+        <constraint id="8a30-ed83-a88e-7837" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="8a30-ed83-a88e-7837">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="8a30-ed83-a88e-7837">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="8dc2-7bcb-edd4-010a" name="幽冥行者" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="18" import="true">
+      <profiles>
+        <profile id="267c-631b-7986-772c" name="幽冥行者" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">7"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">14"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x100mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">7” 14” 2 亡灵，自主意识，活化构装体，恐惧，轻型部队，高大</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9dd2-4cf8-f556-e521" name="幽冥行者" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">3</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="81e5-f699-78e0-26e0" name="幽冥行者" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">2</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">幽冥行者 石化凝视，戟</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3227-dbf0-5d0b-2f4f" name="来源" hidden="false">
+          <description>用户提供军书第18页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="70ee-239b-7099-e124" name="古代城械" hidden="false" targetId="2a89-eb67-de68-9d12" primary="true" />
+        <categoryLink id="c590-6f7c-cf88-c61a" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="275" />
+      </costs>
+      <constraints>
+        <constraint id="c6ca-56a5-2996-6c9b" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="c6ca-56a5-2996-6c9b">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="c6ca-56a5-2996-6c9b">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="6d6a-1f5f-b1bb-0f54" name="尖啸颅骨投石机" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="19" import="true">
+      <profiles>
+        <profile id="e375-28e5-d05d-94bc" name="尖啸颅骨投石机" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">4"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">4"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">4</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">大型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">构装体</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">75mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">” 4” 4 2 亡灵，尘归尘，战争机器</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2cac-3ac4-a6a8-1c31" name="尖啸颅骨投石机" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">5</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">1</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">4</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">0</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="47a4-ea2c-bcd2-2324" name="尖啸颅骨投石机" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">3</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">2</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">3</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">0</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">2</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">操作员 尖啸颅骨投石机 (5+)，移动或开火</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c738-9307-f710-0b99" name="来源" hidden="false">
+          <description>用户提供军书第19页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="0f95-9169-e938-75f7" name="古代城械" hidden="false" targetId="2a89-eb67-de68-9d12" primary="true" />
+        <categoryLink id="b3a0-0070-4af5-38f4" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="190" />
+      </costs>
+      <constraints>
+        <constraint id="2619-afaa-6a6b-f031" type="max" value="2" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="2619-afaa-6a6b-f031">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="4" field="2619-afaa-6a6b-f031">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="58f7-a8a4-fc1e-c159" name="古墓巨蝎" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="19" import="true">
+      <profiles>
+        <profile id="e050-b75f-3e20-528e" name="古墓巨蝎" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">7"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">14"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x50mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">7” 14” 2 亡灵，活化构装体，恐惧，特殊伏兵 开放地形</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="14ca-7181-0d93-9556" name="古墓巨蝎" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">4</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">5</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="27db-c4e4-3fef-af0e" name="古墓巨蝎" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">4</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">5</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">2</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">古墓巨蝎 毒性攻击，致命一击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="38f9-541d-d67d-8baa" name="来源" hidden="false">
+          <description>用户提供军书第19页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="fbc8-3b30-94cd-4345" name="被埋葬者" hidden="false" targetId="62dc-44fe-599f-546e" primary="true" />
+        <categoryLink id="d168-bdc0-e79d-24ab" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="150" />
+      </costs>
+      <constraints>
+        <constraint id="20b6-d0a0-7eb0-6f46" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="20b6-d0a0-7eb0-6f46">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="20b6-d0a0-7eb0-6f46">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="09d2-5448-7749-faa7" name="喀穆里征战斯芬克斯" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="20" import="true">
+      <profiles>
+        <profile id="b2d0-f184-04cb-3a56" name="喀穆里征战斯芬克斯" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">5</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x100mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">1 亡灵，活化构装体</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7e38-73b8-ff0c-81f5" name="喀穆里征战斯芬克斯" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">6</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">4</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">8</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">3</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7652-e9bc-995b-91a1" name="喀穆里征战斯芬克斯" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">2</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">4</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">4</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">3</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">精锐古墓守卫 轻骑枪，致命一击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="f6b5-be76-b9a5-29ec" name="来源" hidden="false">
+          <description>用户提供军书第20页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="a993-fab1-a5fd-4b88" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true" />
+        <categoryLink id="4661-7aff-d104-4061" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="470" />
+      </costs>
+      <constraints>
+        <constraint id="69a4-d115-73b0-35c6" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="69a4-d115-73b0-35c6">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="69a4-d115-73b0-35c6">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="f279-171a-98b8-e814" name="死灵斯芬克斯" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="20" import="true">
+      <profiles>
+        <profile id="0648-cc31-3377-0029" name="死灵斯芬克斯" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">标准</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x100mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">地面 6” 12” 1 活化构装体，飞行 ， ，轻型部队，自主意识，亡灵</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ef43-b7d1-7bab-9657" name="死灵斯芬克斯" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">6</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">5</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">8</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">3</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="916a-be24-81ff-3c99" name="死灵斯芬克斯" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">5</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">5</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">5</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">1</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">0</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">死灵斯芬克斯 毒性攻击，致命一击，巨型手镰</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6dea-ccd4-5b8f-357a" name="来源" hidden="false">
+          <description>用户提供军书第20页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="f3c9-e44c-0fe3-ded1" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true" />
+        <categoryLink id="c862-e036-2b6d-f2ba" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="450" />
+      </costs>
+      <constraints>
+        <constraint id="e0cb-ee55-e9ed-f6d5" type="max" value="2" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="e0cb-ee55-e9ed-f6d5">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="4" field="e0cb-ee55-e9ed-f6d5">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="6cf3-e489-88b6-ea4f" name="骸魇先锋" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="21" import="true">
+      <profiles>
+        <profile id="bb49-e32c-67d2-0267" name="骸魇先锋" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">10</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">大型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x75mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">地面 6” 12” 1 恐惧，亡灵，飞行 ， ，轻型部队，快速移动，自主意识，</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="049c-104c-e530-6f31" name="骸魇先锋" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">4</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">5</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">5</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8e01-3771-b4ac-9e2b" name="骸魇先锋" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">4</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">5</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">5</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">2</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">4</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骸魇先锋 致命一击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3a7d-cf7f-c7e6-9ad1" name="来源" hidden="false">
+          <description>用户提供军书第21页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="0f1b-502d-f33c-75f4" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true" />
+        <categoryLink id="72d7-9021-1245-d26d" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c7ff-0b42-b7ef-f30b" name="骸魇先锋" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="2bc7-f48f-63b3-5f7f" type="min" value="2" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+            <constraint id="743b-aa16-03fa-fdcc" type="max" value="2" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="0" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="190b-063b-9255-5f24" name="额外骸魇先锋" hidden="false" collective="false" type="model" import="true">
+          <constraints>
+            <constraint id="1896-7b4e-1bed-74a5" type="max" value="0" field="selections" scope="parent" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" />
+          </constraints>
+          <costs>
+            <cost name="分" typeId="5d8a-7c3f-2026-0001" value="145" />
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="260" />
+      </costs>
+      <constraints>
+        <constraint id="032d-a27e-0cfb-efab" type="max" value="3" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="2" field="032d-a27e-0cfb-efab">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="6" field="032d-a27e-0cfb-efab">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="635b-d04c-7a41-e819" name="骨巨人" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="22" import="true">
+      <profiles>
+        <profile id="2b4f-9034-9313-1e8c" name="骨巨人" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">8</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">巨型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">步兵</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">50x50mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">6” 12” 1 亡灵，活化构装体</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="10ef-2aec-67ec-8036" name="骨巨人" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">5</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">6</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">2</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">重甲，重生</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f21d-df4e-e7c0-0ebe" name="骨巨人" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">4</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">6</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">3</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">1</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">骨巨人 碾压攻击 ，致命一击，战斗专注</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5cda-ea1b-0c31-4b09" name="来源" hidden="false">
+          <description>用户提供军书第22页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="ceac-64fe-ef18-8cd6" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true" />
+        <categoryLink id="9e6c-9f8a-29ff-b123" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="340" />
+      </costs>
+      <constraints>
+        <constraint id="ae28-7d89-e9d4-7474" type="max" value="2" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="ae28-7d89-e9d4-7474">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="4" field="ae28-7d89-e9d4-7474">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+    <selectionEntry id="f7e0-c560-b7dd-7389" name="圣甲虫泰坦" hidden="false" collective="false" type="unit" publicationId="2fa3-ddf1-caad-94a8" page="23" import="true">
+      <profiles>
+        <profile id="f8bb-7b76-2b12-b591" name="圣甲虫泰坦" hidden="false" typeId="56cd-0313-13d5-cdf1" typeName="全局">
+          <characteristics>
+            <characteristic name="Adv" typeId="562b-23a9-360d-ae04">6"</characteristic>
+            <characteristic name="Mar" typeId="8ddb-90cd-9e85-71fd">12"</characteristic>
+            <characteristic name="Dis" typeId="499e-c6d9-39d7-423f">10</characteristic>
+            <characteristic name="高度" typeId="aa55-50fc-2e79-0c6b">巨型</characteristic>
+            <characteristic name="类型" typeId="cd43-53b8-82bd-dc5d">野兽</characteristic>
+            <characteristic name="底盘" typeId="3d37-a07e-a372-6ae7">100x150mm</characteristic>
+            <characteristic name="模型规则" typeId="2716-d619-bd6e-c13a">地面 6” 12” 1 亡灵，飞行 ， ，活化构装体</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="821c-d920-07e1-8128" name="圣甲虫泰坦" hidden="false" typeId="1c3d-ea19-bd5e-c94e" typeName="防御">
+          <characteristics>
+            <characteristic name="HP" typeId="7159-7b93-749c-5e39">8</characteristic>
+            <characteristic name="Def" typeId="0c48-bbbe-2ce5-366b">3</characteristic>
+            <characteristic name="Res" typeId="bf53-ee3e-1216-a29e">8</characteristic>
+            <characteristic name="Arm" typeId="21eb-30e6-3a60-8705">3</characteristic>
+            <characteristic name="装备与规则" typeId="43dd-edef-870d-73d5">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8543-acad-6ed8-3a7a" name="圣甲虫泰坦" hidden="false" typeId="eddd-78eb-dea2-b308" typeName="进攻">
+          <characteristics>
+            <characteristic name="Att" typeId="6a86-5f60-ea3a-ec3f">6</characteristic>
+            <characteristic name="Off" typeId="7e3f-edad-c60d-0479">3</characteristic>
+            <characteristic name="Str" typeId="0260-4f71-8fde-b4f7">1</characteristic>
+            <characteristic name="AP" typeId="d813-a407-8565-a1ab">-</characteristic>
+            <characteristic name="Agi" typeId="338a-dfb3-3aa8-0aab">-</characteristic>
+            <characteristic name="武器与规则" typeId="eb75-8dab-a170-ac80">圣甲虫泰坦 碾压攻击</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d1b7-a615-2c5b-11d3" name="来源" hidden="false">
+          <description>用户提供军书第23页；复杂装备与条件规则见 IMPLEMENTATION_NOTES.md。</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="289e-50e0-1936-4a9d" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true" />
+        <categoryLink id="2556-eb41-dfaa-a00e" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+      </categoryLinks>
+      <costs>
+        <cost name="分" typeId="5d8a-7c3f-2026-0001" value="550" />
+      </costs>
+      <constraints>
+        <constraint id="d8bc-edcc-aa02-4e6f" type="max" value="1" field="selections" scope="roster" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" />
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="d8bc-edcc-aa02-4e6f">
+          <conditions>
+            <condition type="lessThan" value="3000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+        <modifier type="set" value="2" field="d8bc-edcc-aa02-4e6f">
+          <conditions>
+            <condition type="atLeast" value="8000" field="limit::5d8a-7c3f-2026-0001" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries />
+      <selectionEntryGroups />
+    </selectionEntry>
+  </selectionEntries>
+  <categoryEntries />
+  <forceEntries>
+    <forceEntry id="6121-a9c1-d907-d97d" name="标准军队" hidden="false" publicationId="2fa3-ddf1-caad-94a8" page="6">
+      <categoryLinks>
+        <categoryLink id="7aa2-b070-7632-e9ec" name="人物" hidden="false" targetId="5f81-2ced-95dd-d789" primary="true">
+          <constraints>
+            <constraint id="3773-fb82-dfe4-21e7" type="max" value="40" field="5d8a-7c3f-2026-0001" scope="roster" shared="true" percentValue="true" includeChildSelections="true" includeChildForces="true" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="02c3-ff45-32a2-5d7d" name="核心" hidden="false" targetId="1519-32b0-12ac-3a7b" primary="true">
+          <constraints>
+            <constraint id="8584-e1fb-2fad-e8d9" type="min" value="25" field="5d8a-7c3f-2026-0001" scope="roster" shared="true" percentValue="true" includeChildSelections="true" includeChildForces="true" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="29af-344b-1e4d-e2f2" name="特殊" hidden="false" targetId="61ac-87b4-5333-a8ac" primary="true" />
+        <categoryLink id="ccd0-5639-ea14-38b7" name="古代城械" hidden="false" targetId="2a89-eb67-de68-9d12" primary="true">
+          <constraints>
+            <constraint id="4752-a909-b62a-aac9" type="max" value="35" field="5d8a-7c3f-2026-0001" scope="roster" shared="true" percentValue="true" includeChildSelections="true" includeChildForces="true" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="0831-44f3-4a0b-15a9" name="构装生物" hidden="false" targetId="f70f-8eea-6f00-26b0" primary="true">
+          <constraints>
+            <constraint id="9644-49e7-6613-4ad9" type="max" value="35" field="5d8a-7c3f-2026-0001" scope="roster" shared="true" percentValue="true" includeChildSelections="true" includeChildForces="true" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="90a7-3a9e-b788-f40b" name="被埋葬者" hidden="false" targetId="62dc-44fe-599f-546e" primary="true">
+          <constraints>
+            <constraint id="3135-08d8-7ad9-6df6" type="max" value="30" field="5d8a-7c3f-2026-0001" scope="roster" shared="true" percentValue="true" includeChildSelections="true" includeChildForces="true" />
+          </constraints>
+        </categoryLink>
+        <categoryLink id="b8e8-8819-efcb-9e8e" name="将军" hidden="false" targetId="a1a2-7ec2-3df9-42d2" primary="false" />
+        <categoryLink id="f606-8c6d-706b-970d" name="军旗手" hidden="false" targetId="ec1f-c86b-e4fc-fc1a" primary="false" />
+        <categoryLink id="aba8-dd0e-9b21-7e39" name="非人物单位" hidden="false" targetId="6426-3fa4-f04d-590d" primary="false" />
+        <categoryLink id="a90d-841e-9eab-b220" name="法师" hidden="false" targetId="20b9-642f-0e32-694c" primary="false" />
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+</catalogue>

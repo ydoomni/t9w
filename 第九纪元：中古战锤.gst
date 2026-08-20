@@ -90,6 +90,37 @@
     <categoryEntry id="3743-9974-522c-324a" name="毁灭装置" hidden="false" />
     <categoryEntry id="5cda-4ae9-ca9b-cbf4" name="氏族雷霆" hidden="false" />
     <categoryEntry id="5f73-2713-c55f-c8d2" name="战争引擎" hidden="false" />
+    <categoryEntry id="ae69-4b70-141e-b2ac" name="女王之弓" hidden="false" />
+    <categoryEntry id="2a89-eb67-de68-9d12" name="古代城械" hidden="false" />
+    <categoryEntry id="f70f-8eea-6f00-26b0" name="构装生物" hidden="false" />
+    <categoryEntry id="62dc-44fe-599f-546e" name="被埋葬者" hidden="false" />
+    <categoryEntry id="3cf8-3e68-f5bf-6852" name="圣赞使者" hidden="false" />
+    <categoryEntry id="5579-60a2-1050-07ed" name="天降大石头" hidden="false" />
+    <categoryEntry id="0df8-a707-3d27-1d9b" name="又大又狠" hidden="false" />
+    <categoryEntry id="1ca3-af1a-0efb-40bb" name="尸山骨海" hidden="false" />
+    <categoryEntry id="093f-366a-9f5b-327d" name="狂啸恶灵" hidden="false" />
+    <categoryEntry id="5405-afc3-b550-70d3" name="军火库" hidden="false" />
+    <categoryEntry id="8bf4-342d-c479-c68c" name="陆行堡垒" hidden="false" />
+    <categoryEntry id="c045-8bf4-8a74-e6a9" name="帝国助力" hidden="false" />
+    <categoryEntry id="9ed0-5a91-1d81-e91d" name="信仰，钢铁和火药" hidden="false" />
+    <categoryEntry id="7206-14bc-69f9-34cd" name="火药桶" hidden="false" />
+    <categoryEntry id="131b-9ba7-1e8f-be08" name="驯化野兽" hidden="false" />
+    <categoryEntry id="c8f8-7b40-26a3-7d84" name="荒原猛兽" hidden="false" />
+    <categoryEntry id="9bf5-d4ce-0acf-1f60" name="禁忌工坊" hidden="false" />
+    <categoryEntry id="e15f-c594-8ff5-6085" name="肉体实验室" hidden="false" />
+    <categoryEntry id="2ff9-bcce-ee80-f5c7" name="苦难者" hidden="false" />
+    <categoryEntry id="6d69-9c60-c109-fadb" name="疾速亡者" hidden="false" />
+    <categoryEntry id="30f5-b6d0-d999-0fa8" name="深渊惧兽" hidden="false" />
+    <categoryEntry id="9bfd-6949-4e53-d533" name="打捞军火" hidden="false" />
+    <categoryEntry id="929f-6a0e-7995-2727" name="游猎战士" hidden="false" />
+    <categoryEntry id="ed4c-f75f-8ed2-4335" name="雷霆蜥蜴" hidden="false" />
+    <categoryEntry id="c1ea-8178-e1a4-6afc" name="荒野恐怖" hidden="false" />
+    <categoryEntry id="4194-0a10-71ff-6d98" name="伏击捕食者" hidden="false" />
+    <categoryEntry id="172e-b1d1-a19c-9f5a" name="狂信徒" hidden="false" />
+    <categoryEntry id="e408-059c-91b5-4386" name="神灯精灵" hidden="false" />
+    <categoryEntry id="12a7-df39-60ed-e641" name="熊神信仰" hidden="false" />
+    <categoryEntry id="89aa-3b50-1acd-4ef9" name="霜原恐惧" hidden="false" />
+    <categoryEntry id="e0f7-7185-c544-61f8" name="千神使者" hidden="false" />
   </categoryEntries>
   <sharedRules>
     <rule id="37d1-0e5d-dda6-dff3" name="军队分值" hidden="false" publicationId="a41c-a267-ba00-e748">
