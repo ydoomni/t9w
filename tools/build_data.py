@@ -5,9 +5,14 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 try:
-    from tools.faction_books import FACTIONS
+    from tools.faction_books import FACTIONS as FIRST_BATCH_FACTIONS
+    from tools.faction_books_batch2 import FACTIONS as SECOND_BATCH_FACTIONS
 except ModuleNotFoundError:  # Support direct execution: python tools/build_data.py
-    from faction_books import FACTIONS
+    from faction_books import FACTIONS as FIRST_BATCH_FACTIONS
+    from faction_books_batch2 import FACTIONS as SECOND_BATCH_FACTIONS
+
+
+FACTIONS = [*FIRST_BATCH_FACTIONS, *SECOND_BATCH_FACTIONS]
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -201,6 +206,37 @@ CATEGORIES = {
     "engines-destruction": "毁灭装置",
     "clan-thunder": "氏族雷霆",
     "war-engines": "战争引擎",
+    "queen-bow": "女王之弓",
+    "ancient-engines": "古代城械",
+    "constructs": "构装生物",
+    "buried": "被埋葬者",
+    "daemonic-heralds": "圣赞使者",
+    "falling-rocks": "天降大石头",
+    "bigger-and-meaner": "又大又狠",
+    "corpse-mountain": "尸山骨海",
+    "wailing-wraiths": "狂啸恶灵",
+    "arsenal": "军火库",
+    "land-fortresses": "陆行堡垒",
+    "empire-support": "帝国助力",
+    "faith-steel-gunpowder": "信仰，钢铁和火药",
+    "powder-kegs": "火药桶",
+    "tamed-beasts": "驯化野兽",
+    "wasteland-beasts": "荒原猛兽",
+    "forbidden-workshop": "禁忌工坊",
+    "flesh-laboratory": "肉体实验室",
+    "sufferers": "苦难者",
+    "swift-dead": "疾速亡者",
+    "abyssal-dreadbeasts": "深渊惧兽",
+    "salvage-arsenal": "打捞军火",
+    "hunter-warriors": "游猎战士",
+    "thunder-lizards": "雷霆蜥蜴",
+    "wilderness-horrors": "荒野恐怖",
+    "ambush-predators": "伏击捕食者",
+    "fanatics": "狂信徒",
+    "lamp-djinn": "神灯精灵",
+    "bear-faith": "熊神信仰",
+    "frost-terrors": "霜原恐惧",
+    "thousand-gods": "千神使者",
 }
 
 
